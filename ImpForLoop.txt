@@ -1,0 +1,14 @@
+/*Controlling a for Loop with Floating-Point Values
+
+The for loop examples so far have used an integer variable to control the loop, but you can use anything you like. The following code fragment uses floating-point values to control the loop:
+const double pi { 3.14159265358979323846 };
+for (double radius {2.5}; radius <= 20.0; radius += 2.5)
+{
+ std:: cout << "radius = " << std::setw(12) << radius
+
+}
+
+<< "  area = " << std::setw(12)
+<< pi * radius * radius << std::endl;
+
+*/
