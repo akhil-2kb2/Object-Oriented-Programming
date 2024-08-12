@@ -16,7 +16,7 @@ std::cin >> temperature;                        // Read input value
 total += temperature;                           // Accumulate total of values
 ++count;                                            // Increment count
     std::cout << "Do you want to enter another? (y/n): ";
-    std::cin >> reply;                             // Get response;
+    std::cin >> reply;                             // Get response; this prints avg
   } while (std::tolower(reply) == 'y');
   std::cout << "The average temperature is " << total/count << std::endl;
 }
