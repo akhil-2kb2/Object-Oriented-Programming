@@ -40,7 +40,7 @@ class Complex12
 	  Complex12 C4 = C1;
 	  C1.setData(3, 4);
 	  C2.setData(5, 6);
-	  C3=C1.operator+(C2);
+	  C3=C1+C2;  // C3=C1.operator+(C2);
 	  C3.showData();
 	  cout<<endl;
 	  return 0;
