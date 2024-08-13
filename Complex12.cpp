@@ -7,11 +7,13 @@ class Complex12
 	public:
 	  Complex12():a(0), b(0)
 		{}
-	  Complex12(int x){a=x; b=0;}
-	  Complex12(int x, int y){a=x; b=y;}
+	  Complex12(int x):a(x), b(0)
+		{a=x; b=0;}
+	  Complex12(int x, int y):a(x), b(y)
+		{a=x; b=y;}
 	  Complex12(Complex12 &C)  //Copy Constructor
 	  {
-     	a=C.a;
+	     	a=C.a;
 		b=C.b;
 	  }
 	  ~Complex12(){}  //Destructor
