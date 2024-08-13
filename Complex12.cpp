@@ -5,7 +5,8 @@ class Complex12
 	private:
 	  int a,b;
 	public:
-	  Complex12(){a=0; b=0;}
+	  Complex12():a(0), b(0)
+		{}
 	  Complex12(int x){a=x; b=0;}
 	  Complex12(int x, int y){a=x; b=y;}
 	  Complex12(Complex12 &C)  //Copy Constructor
