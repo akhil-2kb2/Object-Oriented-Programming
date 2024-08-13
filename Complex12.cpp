@@ -28,7 +28,7 @@ class Complex12
 }
 	  void Complex12::showData()
 {
-	  cout<<"\na="<<a<<" b="<<b<<endl;
+	  cout<<"\na="<<a<<" b="<<b;
 }
 	  Complex12 Complex12::add(Complex12 C)
 {
@@ -41,9 +41,11 @@ class Complex12
 {
 	  Complex12 C1(1,2),C2(3),C3;
 	  Complex12 C4 = C1;
-	  C1.setData(3, 4);
-	  C2.setData(5, 6);
-	  C3=C1.add(C2);
+	 // C1.setData(3, 4);
+	 // C2.setData(5, 6);
+	 // C3=C1.add(C2);
+	  C1.showData();
+	  C2.showData();
 	  C3.showData();
 	  cout<<endl;
 	  return 0;
