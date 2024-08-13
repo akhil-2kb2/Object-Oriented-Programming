@@ -28,7 +28,7 @@ class Complex12
 }
 	  void Complex12::showData()
 {
-	  cout<<"\na"<<a<<" b"<<b<<endl;
+	  cout<<"\na="<<a<<" b="<<b<<endl;
 }
 	  Complex12 Complex12::add(Complex12 C)
 {
