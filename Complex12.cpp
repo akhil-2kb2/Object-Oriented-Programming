@@ -1,4 +1,4 @@
-#include<iostream>
+ #include<iostream>
 using namespace std;
 class Complex12
 {
@@ -10,13 +10,13 @@ class Complex12
 	  Complex12(int x, int y){a=x; b=y;}
 	  Complex12(Complex12 &C)  //Copy Constructor
 	  {
-     	a=C.a;
+ 	    	a=C.a;
 		b=C.b;
 	  }
 	  ~Complex12(){}  //Destructor
 	  void setData(int, int);
 	  void showData();
-	  Complex12 add(Complex12);
+	  Complex12 operator+(Complex12);
 };
 	  void Complex12::setData(int x, int y)
 {
@@ -27,7 +27,7 @@ class Complex12
 {
 	  cout<<"\na"<<a<<" b"<<b<<endl;
 }
-	  Complex12 Complex12::add(Complex12 C)
+	  Complex12 Complex12::operator+(Complex12 C)
 {
 	  Complex12 temp(0, 0);
 	  temp.a=a+C.a;
@@ -40,7 +40,7 @@ class Complex12
 	  Complex12 C4 = C1;
 	  C1.setData(3, 4);
 	  C2.setData(5, 6);
-	  C3=C1.add(C2);
+	  C3=C1+C2;  // C3=C1.operator+(C2);
 	  C3.showData();
 	  cout<<endl;
 	  return 0;
