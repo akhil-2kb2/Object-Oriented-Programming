@@ -1,0 +1,21 @@
+//vector Creation, Initialization and Traversal 
+//Here we Complete vector
+/*
+#include <iostream>
+#include <vector>
+
+int main() {
+    // Create an empty vector
+    std::vector<int> myVector;
+
+    // Initialize the vector with values
+    myVector = {1, 2, 3, 4, 5};
+
+    // Traverse and print the vector elements
+    for (int i = 0; i < myVector.size(); i++) {
+        std::cout << myVector[i] << " ";
+    }
+
+    return 0;
+}
+*/
