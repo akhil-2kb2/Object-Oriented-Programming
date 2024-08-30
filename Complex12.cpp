@@ -10,13 +10,15 @@ class Complex12
 	  Complex12(int x, int y){a=x; b=y;}
 	  Complex12(Complex12 &C)  //Copy Constructor
 	  {
- 	    	a=C.a;
+ 	    a=C.a;
 		b=C.b;
 	  }
 	  ~Complex12(){}  //Destructor
 	  void setData(int, int);
 	  void showData();
 	  Complex12 operator+(Complex12);
+	  Complex12 operator-(Complex12);
+	  Complex12 operator-();
 };
 	  void Complex12::setData(int x, int y)
 {
@@ -25,7 +27,7 @@ class Complex12
 }
 	  void Complex12::showData()
 {
-	  cout<<"\na"<<a<<" b"<<b<<endl;
+	  cout<<"\na="<<a<<" b="<<b<<endl;
 }
 	  Complex12 Complex12::operator+(Complex12 C)
 {
@@ -34,6 +36,21 @@ class Complex12
 	  temp.b=b+C.b;
 	  return temp;
 }
+	  Complex12 Complex12::operator-(Complex12 C)
+	  {
+	  Complex12 temp;
+	  temp.a=a-C.a;
+	  temp.b=b-C.b;
+	  return temp;
+	  }
+	  Complex12 Complex12::operator-()
+	  {
+		Complex12 temp;
+		temp.a=-a;
+		temp.b=-b;
+		return temp;	
+
+	  }
    int main()
 {
 	  Complex12 C1(1,2),C2(3),C3;
@@ -41,6 +58,12 @@ class Complex12
 	  C1.setData(3, 4);
 	  C2.setData(5, 6);
 	  C3=C1+C2;  // C3=C1.operator+(C2);
+	  C3.showData();
+	  cout<<endl;
+	  C3=C1-C2;  // C3=C1.operator-(C2);
+	  C3.showData();
+	  cout<<endl;
+	  C3=-C2;  // C3=C1.operator-();
 	  C3.showData();
 	  cout<<endl;
 	  return 0;
